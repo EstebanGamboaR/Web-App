@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Esteban Gamboa">
+    <title>Tablero de Misiones - Academia Ninja</title>
+    <link rel="stylesheet" href="css/naruto.css">
+</head>
+<body class="pagina-actividades">
+
+    <!-- Lluvia de kunais -->
+    <div class="kunais-lluvia">
+        <div class="kunai kunai1">🗡️</div>
+        <div class="kunai kunai2">🗡️</div>
+        <div class="kunai kunai3">🗡️</div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="tablero-misiones">
+        <div class="marco-madera">
+            
+            <!-- Título -->
+            <div class="titulo-rasengan">
+                <h1>TABLERO DE MISIONES RANGO D</h1>
+                <div class="rasengan-animacion"></div>
+            </div>
+
+            <!-- Botón volver -->
+            <a href="index.html" class="boton-kagebunshin">
+                <span class="sombra-clon"></span>
+                ⬅ Técnica de Sustitución
+            </a>
+
+            <!-- Tabla de misiones -->
+            <div class="contenedor-tabla-ninja">
+                <table class="tabla-misiones">
+                    <thead>
+                        <tr class="cabecera-hokage">
+                            <th><span class="icono-columna">🥷</span> NINJA SENSEI</th>
+                            <th><span class="icono-columna">📜</span> JUTSU/HABILIDAD</th>
+                            <th><span class="icono-columna">💰</span> RYŌS (₡)</th>
+                            <th><span class="icono-columna">🔥</span> ELEMENTO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                        <!-- Se llena con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Panel Byakugan - Estadísticas -->
+            <div class="panel-byakugan">
+                <div class="ojo-byakugan"></div>
+                
+                <h2 class="titulo-analisis">ANÁLISIS BYAKUGAN</h2>
+                
+                <div class="stats-contenedor">
+                    
+                    <!-- Misión Más Económica -->
+                    <div class="stat-byakugan">
+                        <div class="mini-rasengan verde"></div>
+                        <div class="stat-label">Misión Más Económica</div>
+                        <div class="stat-valor" id="misionBarata">
+                            <span style="color: #999;">Cargando...</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Misión Más Costosa -->
+                    <div class="stat-byakugan">
+                        <div class="mini-rasengan rojo"></div>
+                        <div class="stat-label">Misión Más Costosa</div>
+                        <div class="stat-valor" id="misionCara">
+                            <span style="color: #999;">Cargando...</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Promedio de Ryōs -->
+                    <div class="stat-byakugan">
+                        <div class="mini-rasengan amarillo"></div>
+                        <div class="stat-label">Promedio de Ryōs</div>
+                        <div class="stat-valor" id="promedioRyos">₡0</div>
+                    </div>
+                    
+                    <!-- Total de Misiones -->
+                    <div class="stat-byakugan">
+                        <div class="mini-rasengan azul"></div>
+                        <div class="stat-label">Total de Misiones Disponibles</div>
+                        <div class="stat-valor" id="totalMisionesDisp">0</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Sello del Hokage -->
+            <div class="sello-hokage">
+                <div class="sello-imagen"></div>
+                <p class="firma-hokage">Aprobado por el 7° Hokage</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="js/naruto-actividades.js"></script>
+    <script src="js/reproductor.js"></script>
+</body>
+</html>

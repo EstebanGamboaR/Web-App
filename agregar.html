@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Esteban Gamboa">
+    <title>Registrar Nueva Misión - Academia Ninja</title>
+    <link rel="stylesheet" href="css/naruto.css">
+</head>
+<body class="pagina-agregar">
+    
+    <!-- Efecto sharingan de fondo -->
+    <div class="sharingan-bg">
+        <div class="tomoe tomoe1"></div>
+        <div class="tomoe tomoe2"></div>
+        <div class="tomoe tomoe3"></div>
+    </div>
+
+    <!-- Contenedor principal pergamino de invocación -->
+    <div class="pergamino-invocacion">
+        <div class="sello-superior">
+            <h1 class="titulo-registro">
+                <span class="kanji-izq">契</span>
+                CONTRATO DE NUEVA MISIÓN
+                <span class="kanji-der">約</span>
+            </h1>
+        </div>
+
+        <!-- Botón de regreso estilo Hiraishin -->
+        <a href="index.html" class="boton-hiraishin">
+            <div class="marca-hiraishin"></div>
+            <span>Jutsu de Teletransportación</span>
+        </a>
+
+        <!-- Formulario estilo contrato ninja -->
+        <form id="formularioMision" class="formulario-ninja">
+            
+            <!-- Campo Nombre con sello personal -->
+            <div class="campo-grupo sello-personal">
+                <div class="icono-campo">
+                    <div class="mini-sharingan"></div>
+                </div>
+                <div class="campo-contenedor">
+                    <label class="label-ninja" for="nombreNinja">
+                        IDENTIDAD DEL NINJA
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="nombreNinja" 
+                        class="input-ninja"
+                        placeholder="Ej: Uzumaki Naruto"
+                        required
+                    >
+                    <div class="linea-chakra"></div>
+                    <div class="error-mensaje" id="errorNombre"></div>
+                </div>
+            </div>
+
+            <!-- Campo Actividad con pergamino -->
+            <div class="campo-grupo pergamino-jutsu">
+                <div class="icono-campo">
+                    <div class="mini-pergamino">📜</div>
+                </div>
+                <div class="campo-contenedor">
+                    <label class="label-ninja" for="actividadNinja">
+                        JUTSU O HABILIDAD ESPECIAL
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="actividadNinja" 
+                        class="input-ninja"
+                        placeholder="Ej: Entrenamiento de Taijutsu"
+                        required
+                    >
+                    <div class="linea-chakra"></div>
+                    <div class="error-mensaje" id="errorActividad"></div>
+                </div>
+            </div>
+
+            <!-- Campo Precio con billetera Gama-chan -->
+            <div class="campo-grupo gama-chan">
+                <div class="icono-campo">
+                    <div class="rana-monedero">🐸</div>
+                </div>
+                <div class="campo-contenedor">
+                    <label class="label-ninja" for="precioMision">
+                        PRECIO EN RYŌS (₡3,000 - ₡15,000)
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <div class="precio-contenedor">
+                        <span class="simbolo-ryo">₡</span>
+                        <input 
+                            type="number" 
+                            id="precioMision" 
+                            class="input-ninja input-precio"
+                            min="3000"
+                            max="15000"
+                            placeholder="5000"
+                            required
+                        >
+                    </div>
+                    <div class="linea-chakra"></div>
+                    <div class="rango-precio">
+                        <span class="min-precio">Mínimo: ₡3,000</span>
+                        <span class="max-precio">Máximo: ₡15,000</span>
+                    </div>
+                    <div class="error-mensaje" id="errorPrecio"></div>
+                </div>
+            </div>
+
+            <!-- Selector de elemento ninja -->
+            <div class="campo-grupo selector-elemento">
+                <label class="label-ninja">AFINIDAD ELEMENTAL</label>
+                <div class="elementos-grid">
+                    <div class="elemento-opcion" data-elemento="fuego">
+                        <input type="radio" name="elemento" value="fuego" id="elemFuego">
+                        <label for="elemFuego">
+                            <span class="icono-elemento">🔥</span>
+                            <span>Katon</span>
+                        </label>
+                    </div>
+                    <div class="elemento-opcion" data-elemento="agua">
+                        <input type="radio" name="elemento" value="agua" id="elemAgua">
+                        <label for="elemAgua">
+                            <span class="icono-elemento">💧</span>
+                            <span>Suiton</span>
+                        </label>
+                    </div>
+                    <div class="elemento-opcion" data-elemento="tierra">
+                        <input type="radio" name="elemento" value="tierra" id="elemTierra">
+                        <label for="elemTierra">
+                            <span class="icono-elemento">🪨</span>
+                            <span>Doton</span>
+                        </label>
+                    </div>
+                    <div class="elemento-opcion" data-elemento="viento">
+                        <input type="radio" name="elemento" value="viento" id="elemViento">
+                        <label for="elemViento">
+                            <span class="icono-elemento">🌪️</span>
+                            <span>Futon</span>
+                        </label>
+                    </div>
+                    <div class="elemento-opcion" data-elemento="rayo">
+                        <input type="radio" name="elemento" value="rayo" id="elemRayo" checked>
+                        <label for="elemRayo">
+                            <span class="icono-elemento">⚡</span>
+                            <span>Raiton</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de acción con sellos de mano -->
+            <div class="acciones-formulario">
+                <button type="submit" class="boton-jutsu boton-registrar">
+                    <div class="sellos-mano">
+                        <span class="sello">🤘</span>
+                        <span class="sello">✌️</span>
+                        <span class="sello">👊</span>
+                    </div>
+                    <span class="texto-boton">INVOCAR MISIÓN</span>
+                    <div class="efecto-rasengan-mini"></div>
+                </button>
+
+                <button type="button" class="boton-jutsu boton-limpiar" onclick="limpiarFormulario()">
+                    <span class="texto-boton">JUTSU DE LIMPIEZA</span>
+                    <div class="efecto-viento"></div>
+                </button>
+            </div>
+
+            <!-- Mensaje de confirmación estilo manga -->
+            <div id="mensajeConfirmacion" class="mensaje-confirmacion oculto">
+                <div class="explosion-manga">
+                    <div class="estrella est1">✦</div>
+                    <div class="estrella est2">✧</div>
+                    <div class="estrella est3">✦</div>
+                </div>
+                <div class="contenido-mensaje">
+                    <div class="icono-exito">✓</div>
+                    <h3>¡MISIÓN REGISTRADA CON ÉXITO!</h3>
+                    <p id="detallesMision"></p>
+                    <div class="firma-naruto">¡Dattebayo!</div>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- Decoración: Sellos prohibidos -->
+        <div class="sellos-prohibidos">
+            <div class="sello-prohibido s1"></div>
+            <div class="sello-prohibido s2"></div>
+            <div class="sello-prohibido s3"></div>
+        </div>
+    </div>
+
+    <!-- Efecto de invocación al enviar -->
+    <div id="efectoInvocacion" class="efecto-invocacion-overlay oculto">
+        <div class="circulo-invocacion-grande">
+            <div class="anillos-expansion"></div>
+            <div class="simbolos-rotativos"></div>
+        </div>
+    </div>
+    <script src="js/naruto-agregar.js"></script>
+    <script src="js/reproductor.js"></script>
+</body>
+</html>

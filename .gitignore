@@ -1,0 +1,16 @@
+# Node
+node_modules/
+.env
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Duplicados
+* (1).*

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Esteban Gamboa">
+    <title>Academia Ninja - Servicios Estudiantiles</title>
+    <link rel="stylesheet" href="css/naruto.css">
+</head>
+<body>
+
+    <!-- Efecto de hojas cayendo -->
+    <div class="hojas-contenedor">
+        <div class="hoja hoja1"></div>
+        <div class="hoja hoja2"></div>
+        <div class="hoja hoja3"></div>
+        <div class="hoja hoja4"></div>
+        <div class="hoja hoja5"></div>
+    </div>
+
+    <!-- Símbolo de Konoha giratorio -->
+    <div class="konoha-symbol">
+        <div class="espiral"></div>
+    </div>
+
+    <!-- Pergamino principal -->
+    <div class="pergamino-contenedor">
+        <div class="pergamino-top"></div>
+        <div class="pergamino-contenido">
+            
+            <!-- Título con efecto fuego -->
+            <div class="titulo-fuego">
+                <h1 class="titulo-principal">
+                    <span class="kanji">忍</span>
+                    ACTIVIDADES RECREATIVAS
+                    <span class="kanji">術</span>
+                </h1>
+                <div class="subtitulo-ninja">
+                    <div class="kunai-izq">➤</div>
+                    PARA ESTUDIANTES NINJA
+                    <div class="kunai-der">➤</div>
+                </div>
+            </div>
+
+            <!-- Introducción estilo manga -->
+            <div class="introduccion-box">
+                <div class="chat-ninja">
+                    <div class="avatar-naruto"></div>
+                    <div class="texto-burbuja">
+                        <p class="dattebayo">
+                            ¡Dattebayo! Bienvenido a nuestra academia donde los estudiantes ninja 
+                            ofrecen sus habilidades especiales para ayudar a otros compañeros.
+                        </p>
+                        <p class="descripcion-mision">
+                            Cada servicio es una <span class="resaltar">misión rango D</span> que puedes 
+                            contratar. ¡Encuentra tu sensei perfecto o registra tu propio jutsu!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portales de invocación -->
+            <div class="invocacion-contenedor">
+                <!-- Portal Izquierdo - Actividades -->
+                <div class="portal-invocacion portal-izq">
+                    <div class="circulo-invocacion">
+                        <div class="simbolos-giratorios">
+                            <span class="simbolo s1">忍</span>
+                            <span class="simbolo s2">術</span>
+                            <span class="simbolo s3">道</span>
+                            <span class="simbolo s4">力</span>
+                        </div>
+                        <div class="sello-central">
+                            <a href="actividades.html" class="boton-portal">
+                                <div class="icono-scroll">📜</div>
+                                <span class="texto-portal">VER MISIONES</span>
+                                <div class="rango-mision">RANGO D</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="efecto-chakra chakra-azul"></div>
+                </div>
+
+                <!-- Portal Derecho - Agregar -->
+                <div class="portal-invocacion portal-der">
+                    <div class="circulo-invocacion">
+                        <div class="simbolos-giratorios reversa">
+                            <span class="simbolo s1">新</span>
+                            <span class="simbolo s2">技</span>
+                            <span class="simbolo s3">登</span>
+                            <span class="simbolo s4">録</span>
+                        </div>
+                        <div class="sello-central">
+                            <a href="agregar.html" class="boton-portal">
+                                <div class="icono-scroll">✍️</div>
+                                <span class="texto-portal">NUEVA MISIÓN</span>
+                                <div class="rango-mision">REGISTRAR</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="efecto-chakra chakra-naranja"></div>
+                </div>
+            </div>
+
+            <!-- Stats ninja -->
+            <div class="stats-ninja">
+                <div class="stat-card">
+                    <div class="stat-icon">🥷</div>
+                    <div class="stat-numero" id="totalNinjas">4</div>
+                    <div class="stat-label">Ninjas Activos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-numero" id="totalMisiones">4</div>
+                    <div class="stat-label">Misiones Disponibles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-numero" id="voluntadFuego">∞</div>
+                    <div class="stat-label">Voluntad de Fuego</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="pergamino-bottom"></div>
+    </div>
+
+    <!-- Bandana de Konoha flotante -->
+    <div class="bandana-flotante">
+        <div class="placa-metal">
+            <div class="simbolo-konoha-mini"></div>
+        </div>
+    </div>
+
+    <button class="boton-musica" onclick="toggleMusic()">🎵</button>
+
+    <script src="js/naruto-index.js"></script>
+    <script src="js/reproductor.js"></script>
+</body>
+</html>
